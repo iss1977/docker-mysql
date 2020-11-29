@@ -33,9 +33,25 @@ Run `docker ps` to get our < mysql-container-id> :
 
 Connect to MySQL:
 
-```
+```javascript
 docker exec -it <mysql-container-id> mysql -p
 ```
-*We set the password as “secret” when we started the container. `<mysql-container-id>` is 1e4f74226825*
+*We set the password as “secret” when we started the container.* `<mysql-container-id>` *is* `1e4f74226825`
+
+```sql
+mysql> SHOW DATABASES;
+
++--------------------+  
+| Database           |  
++--------------------+  
+| information_schema |  
+| mysql              |  
+| performance_schema |  
+| sys                |  
+| todos              |  
++--------------------+  
+5 rows in set (0.00 sec)  
+```
+
 
 
