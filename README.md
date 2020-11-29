@@ -25,17 +25,17 @@ After running this command we will get an running mysql instance
 
 As next step, we want to **login in our MySQL instance**
 
-Run `docker ps` to get our < Container ID> : 
+Run `docker ps` to get our < mysql-container-id> : 
 
 | CONTAINER ID | IMAGE | COMMAND | CREATED | STATUS | PORTS | NAMES
-|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|
 | **1e4f74226825** | mysql:5.7 | "docker-entrypoint.s…" | 5 minutes ago | Up 5 minutes | 3306/tcp, 33060/tcp | intelligent_meninsky |
 
 Connect to MySQL:
 
 ```
-docker exec -it 1e4f74226825 mysql -p
+docker exec -it <mysql-container-id> mysql -p
 ```
-We set the password as “secret” when we started the container.
+*We set the password as “secret” when we started the container. `<mysql-container-id>` is 1e4f74226825*
 
 
